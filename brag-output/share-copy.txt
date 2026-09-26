@@ -1,0 +1,3 @@
+We built CitizenPulse BRICS to convert unstructured citizen voice memos across 14 regional languages into explainable infrastructure priority scores.
+
+From rural Telugu drinking water requests to 91/100 explainable priority scores, spatial heatmaps, and executive cabinet policy briefs in under 3 seconds.

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080, initial-scale=1.0">
+  <title>CitizenPulse BRICS - Launch Video</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      background-color: #07111F;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: #F8FAFC;
+      position: relative;
+    }
+
+    /* Container */
+    .viewport {
+      width: 1920px;
+      height: 1080px;
+      position: relative;
+      background: radial-gradient(circle at 50% 30%, #0F233D 0%, #07111F 70%);
+      overflow: hidden;
+    }
+
+    /* Cybernetic background grid */
+    .bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(to right, rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: 0.8;
+    }
+
+    /* Ambient Glows */
+    .glow-cyan {
+      position: absolute;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(34, 211, 238, 0.15) 0%, transparent 70%);
+      top: -200px;
+      left: -200px;
+      pointer-events: none;
+    }
+
+    .glow-purple {
+      position: absolute;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+      bottom: -200px;
+      right: -200px;
+      pointer-events: none;
+    }
+
+    /* Glass Panels */
+    .glass-card {
+      background: rgba(11, 22, 40, 0.85);
+      border: 1px solid rgba(34, 211, 238, 0.25);
+      border-radius: 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(34, 211, 238, 0.1);
+      backdrop-filter: blur(16px);
+      padding: 40px;
+    }
+
+    .glass-badge {
+      background: rgba(34, 211, 238, 0.1);
+      border: 1px solid rgba(34, 211, 238, 0.3);
+      color: #22D3EE;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 1.5px;
+      padding: 8px 20px;
+      border-radius: 9999px;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+
+    /* Gradient Texts */
+    .text-cyan-grad {
+      background: linear-gradient(135deg, #38BDF8 0%, #22D3EE 50%, #818CF8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Header Nav Bar */
+    .top-nav {
+      position: absolute;
+      top: 40px;
+      left: 80px;
+      right: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 50;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #22D3EE, #8B5CF6);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 24px;
+      color: #07111F;
+      box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+    }
+
+    .brand-title {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    /* SCENES SYSTEM */
+    .scene {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 80px;
+      opacity: 0;
+      transform: scale(0.96);
+      pointer-events: none;
+    }
+
+    /* SCENE 1: HOOK */
+    .scene-1 .hook-box {
+      text-align: center;
+      max-width: 1300px;
+    }
+
+    .scene-1 h1 {
+      font-size: 72px;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-top: 24px;
+      margin-bottom: 24px;
+      letter-spacing: -1.5px;
+    }
+
+    .scene-1 p {
+      font-size: 28px;
+      color: #94A3B8;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* SCENE 2: INGESTION */
+    .scene-2 .ingestion-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      width: 100%;
+      max-width: 1600px;
+    }
+
+    .signal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      border-bottom: 1px solid rgba(34, 211, 238, 0.15);
+      padding-bottom: 16px;
+    }
+
+    .waveform-box {
+      background: rgba(7, 17, 31, 0.6);
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .wave-bar {
+      width: 6px;
+      height: 32px;
+      background: #22D3EE;
+      border-radius: 3px;
+    }
+
+    .translation-box {
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    /* SCENE 3: PRIORITY ENGINE */
+    .scene-3 .engine-container {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 50px;
+      width: 100%;
+      max-width: 1600px;
+      align-items: center;
+    }
+
+    .score-gauge-card {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .score-circle {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: conic-gradient(#22D3EE 0% 91%, rgba(34, 211, 238, 0.1) 91% 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 0 40px rgba(34, 211, 238, 0.3);
+      margin-bottom: 24px;
+    }
+
+    .score-circle-inner {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: #0B1628;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .score-val {
+      font-size: 80px;
+      font-weight: 900;
+      color: #38BDF8;
+      line-height: 1;
+    }
+
+    .score-label {
+      font-size: 14px;
+      color: #94A3B8;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .breakdown-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .breakdown-item {
+      background: rgba(7, 17, 31, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 16px 24px;
+    }
+
+    .breakdown-bar-bg {
+      height: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .breakdown-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #22D3EE, #8B5CF6);
+      border-radius: 5px;
+      width: 0%;
+    }
+
+    /* SCENE 4: POLICY BRIEF & SIMULATION */
+    .scene-4 .brief-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      width: 100%;
+      max-width: 1600px;
+    }
+
+    .impact-stat-box {
+      background: linear-gradient(135deg, rgba(34, 211, 238, 0.15), rgba(139, 92, 246, 0.15));
+      border: 1px solid rgba(34, 211, 238, 0.4);
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    .impact-num {
+      font-size: 72px;
+      font-weight: 900;
+      color: #4ADE80;
+      text-shadow: 0 0 20px rgba(74, 222, 128, 0.4);
+    }
+
+    /* SCENE 5: OUTRO SLAM */
+    .scene-5 .hero-outro {
+      text-align: center;
+      max-width: 1300px;
+    }
+
+    .outro-title {
+      font-size: 96px;
+      font-weight: 900;
+      letter-spacing: -2px;
+      margin-top: 24px;
+      margin-bottom: 20px;
+    }
+
+    .outro-tagline {
+      font-size: 36px;
+      color: #94A3B8;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+
+    .hackathon-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(16, 29, 49, 0.9);
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      padding: 16px 36px;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(139, 92, 246, 0.2);
+    }
+
+    .brics-flag-dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+    }
+    .dot-b { background: #3B82F6; }
+    .dot-r { background: #EF4444; }
+    .dot-i { background: #F97316; }
+    .dot-c { background: #EAB308; }
+    .dot-s { background: #22C55E; }
+  </style>
+</head>
+<body>
+
+  <div data-hf-id="hf-yq2b" class="viewport" id="root-comp" data-composition-id="main" data-width="1920" data-height="1080" data-duration="20">
+    <div data-hf-id="hf-yqqm" class="bg-grid"></div>
+    <div data-hf-id="hf-o6up" class="glow-cyan"></div>
+    <div data-hf-id="hf-fuky" class="glow-purple"></div>
+
+    <!-- Audio Elements inside composition container -->
+    <audio data-hf-id="hf-12ju" id="bg-music" data-start="0" data-duration="20" data-track-index="1" data-volume="0.28" src="assets/music/happy-beats-business-moves-vol-9-by-ende-dot-app.mp3"></audio>
+
+    <audio data-hf-id="hf-v1rl" id="sfx-hook" data-start="0.1" data-duration="0.19" data-track-index="2" data-volume="0.6" src="assets/sfx/impact/impactSoft_medium_001.ogg"></audio>
+    <audio data-hf-id="hf-8es6" id="sfx-scene2" data-start="3.5" data-duration="0.11" data-track-index="3" data-volume="0.6" src="assets/sfx/interface/drop_001.ogg"></audio>
+    <audio data-hf-id="hf-69fn" id="sfx-scene3" data-start="7.5" data-duration="0.10" data-track-index="4" data-volume="0.7" src="assets/sfx/interface/click_001.ogg"></audio>
+    <audio data-hf-id="hf-tw8q" id="sfx-score-bell" data-start="9.8" data-duration="1.48" data-track-index="5" data-volume="0.8" src="assets/sfx/impact/impactBell_heavy_000.ogg"></audio>
+    <audio data-hf-id="hf-q7lk" id="sfx-scene4" data-start="12.0" data-duration="0.11" data-track-index="6" data-volume="0.6" src="assets/sfx/interface/drop_001.ogg"></audio>
+    <audio data-hf-id="hf-jcur" id="sfx-logo-bell" data-start="16.0" data-duration="1.48" data-track-index="7" data-volume="0.8" src="assets/sfx/impact/impactBell_heavy_000.ogg"></audio>
+
+    <!-- Header Navigation -->
+    <div data-hf-id="hf-ohu9" class="top-nav">
+      <div data-hf-id="hf-y9s5" class="brand-logo">
+        <div data-hf-id="hf-dozs" class="brand-icon">CP</div>
+        <div data-hf-id="hf-ypy3" class="brand-title">CitizenPulse <span data-hf-id="hf-sjpi" style="color:#22D3EE">BRICS</span></div>
+      </div>
+      <div data-hf-id="hf-1zfl" class="glass-badge">DPI Command Center</div>
+    </div>
+
+    <!-- SCENE 1: HOOK (0.0s - 3.5s) -->
+    <div data-hf-id="hf-bbmy" class="scene scene-1" id="scene-1">
+      <div data-hf-id="hf-ybqh" class="hook-box">
+        <div data-hf-id="hf-d3qj" class="glass-badge" style="margin-bottom: 24px;">BRICS Hackathon Submission</div>
+        <h1 data-hf-id="hf-o8v2" class="text-cyan-grad">14 LANGUAGES.<br data-hf-id="hf-x5px">500,000 CITIZEN SIGNALS.</h1>
+        <p data-hf-id="hf-0v2r">Governments can't aggregate fragmented voice memos fast enough...<br data-hf-id="hf-rsrt"><strong data-hf-id="hf-ftst" style="color: #F8FAFC">until CitizenPulse BRICS.</strong></p>
+      </div>
+    </div>
+
+    <!-- SCENE 2: MULTILINGUAL INGESTION (3.5s - 7.5s) -->
+    <div data-hf-id="hf-5b14" class="scene scene-2" id="scene-2">
+      <div data-hf-id="hf-kfcv" class="ingestion-grid">
+        <div data-hf-id="hf-7hvb" class="glass-card">
+          <div data-hf-id="hf-j1bi" class="signal-header">
+            <span data-hf-id="hf-kjqv" class="glass-badge">Live Voice Ingestion</span>
+            <span data-hf-id="hf-2zhp" style="color:#94A3B8; font-weight: 600;">Telangana, India</span>
+          </div>
+          <div data-hf-id="hf-rvs5" class="waveform-box">
+            <div data-hf-id="hf-gysz" class="wave-bar"></div>
+            <div data-hf-id="hf-0859" class="wave-bar" style="height: 48px;"></div>
+            <div data-hf-id="hf-bevj" class="wave-bar" style="height: 24px;"></div>
+            <div data-hf-id="hf-i2bp" class="wave-bar" style="height: 40px;"></div>
+            <div data-hf-id="hf-77v7" class="wave-bar"></div>
+            <span data-hf-id="hf-cm9b" style="margin-left: 16px; font-weight: 600; color: #38BDF8;">Audio Memo Ingested (.wav)</span>
+          </div>
+          <p data-hf-id="hf-4kyc" style="font-size: 22px; color: #CBD5E1; line-height: 1.6; font-style: italic;">
+            "నల్గొండ మండలంలో త్రాగునీటి ఎద్దడి తీవ్రంగా ఉంది. వెంటనే స్పందించగలరు."
+          </p>
+        </div>
+
+        <div data-hf-id="hf-w6x0" class="glass-card" style="border-color: rgba(139, 92, 246, 0.3);">
+          <div data-hf-id="hf-k9yq" class="signal-header">
+            <span data-hf-id="hf-7dox" class="glass-badge" style="background: rgba(139, 92, 246, 0.15); color: #C084FC; border-color: rgba(139, 92, 246, 0.3);">Neural Translation AI</span>
+            <span data-hf-id="hf-unx0" style="color:#4ADE80; font-weight: 700;">99.2% Confidence</span>
+          </div>
+          <div data-hf-id="hf-pd1x" class="translation-box">
+            <div data-hf-id="hf-mpbr" style="font-size: 14px; color: #94A3B8; font-weight: 700; margin-bottom: 8px;">ENGLISH TRANSLATION (Preserving Urgency)</div>
+            <p data-hf-id="hf-wnfe" style="font-size: 22px; font-weight: 600; color: #F8FAFC; line-height: 1.5;">
+              "Critical drinking water supply deficit reported in Nalgonda Mandal. Immediate infrastructure action required."
+            </p>
+          </div>
+          <div data-hf-id="hf-ut3y" style="display: flex; gap: 16px; margin-top: 24px;">
+            <div data-hf-id="hf-m4wa" style="background: rgba(7, 17, 31, 0.6); padding: 12px 20px; border-radius: 12px; font-size: 15px; color: #94A3B8;">
+              Category: <strong data-hf-id="hf-vb74" style="color: #22D3EE;">Water &amp; Sanitation</strong>
+            </div>
+            <div data-hf-id="hf-ul9c" style="background: rgba(7, 17, 31, 0.6); padding: 12px 20px; border-radius: 12px; font-size: 15px; color: #94A3B8;">
+              Impacted Population: <strong data-hf-id="hf-ummc" style="color: #F8FAFC;">8,400</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENE 3: EXPLAINABLE PRIORITY SCORE (7.5s - 12.0s) -->
+    <div data-hf-id="hf-xuua" class="scene scene-3" id="scene-3">
+      <div data-hf-id="hf-1ggo" class="engine-container">
+        <div data-hf-id="hf-t7x2" class="glass-card score-gauge-card">
+          <div data-hf-id="hf-e29j" class="glass-badge" style="margin-bottom: 24px;">AI Priority Engine</div>
+          <div data-hf-id="hf-mzqz" class="score-circle">
+            <div data-hf-id="hf-hppo" class="score-circle-inner">
+              <div data-hf-id="hf-7mj1" class="score-val" id="score-counter">0</div>
+              <div data-hf-id="hf-pmpd" class="score-label">OUT OF 100</div>
+            </div>
+          </div>
+          <h2 data-hf-id="hf-h45a" style="font-size: 24px; font-weight: 800; color: #38BDF8;">CRITICAL PRIORITY</h2>
+          <p data-hf-id="hf-bfb9" style="color: #94A3B8; font-size: 15px; margin-top: 8px;">High Infrastructure Intervention Priority</p>
+        </div>
+
+        <div data-hf-id="hf-md6f" class="glass-card">
+          <h3 data-hf-id="hf-81sb" style="font-size: 26px; font-weight: 800; margin-bottom: 24px;" class="text-cyan-grad">Explainable 5-Factor Score Breakdown</h3>
+          <div data-hf-id="hf-pyma" class="breakdown-list">
+            <div data-hf-id="hf-k00j" class="breakdown-item">
+              <div data-hf-id="hf-7w8r" style="display: flex; justify-content: space-between; font-weight: 700;">
+                <span data-hf-id="hf-anld">Citizen Demand Volume (30% Weight)</span>
+                <span data-hf-id="hf-tbvm" style="color: #22D3EE;">95 / 100</span>
+              </div>
+              <div data-hf-id="hf-g1db" class="breakdown-bar-bg"><div data-hf-id="hf-wt3w" class="breakdown-bar-fill" id="bar-1"></div></div>
+            </div>
+
+            <div data-hf-id="hf-56r7" class="breakdown-item">
+              <div data-hf-id="hf-ewmz" style="display: flex; justify-content: space-between; font-weight: 700;">
+                <span data-hf-id="hf-ceu5">Infrastructure Gap Overlay (25% Weight)</span>
+                <span data-hf-id="hf-xvok" style="color: #22D3EE;">88 / 100</span>
+              </div>
+              <div data-hf-id="hf-77kf" class="breakdown-bar-bg"><div data-hf-id="hf-7olj" class="breakdown-bar-fill" id="bar-2"></div></div>
+            </div>
+
+            <div data-hf-id="hf-4sg6" class="breakdown-item">
+              <div data-hf-id="hf-eiby" style="display: flex; justify-content: space-between; font-weight: 700;">
+                <span data-hf-id="hf-60ym">Population Impact (20% Weight)</span>
+                <span data-hf-id="hf-0f7f" style="color: #22D3EE;">92 / 100</span>
+              </div>
+              <div data-hf-id="hf-6t9e" class="breakdown-bar-bg"><div data-hf-id="hf-1ivq" class="breakdown-bar-fill" id="bar-3"></div></div>
+            </div>
+
+            <div data-hf-id="hf-4e55" class="breakdown-item">
+              <div data-hf-id="hf-e40x" style="display: flex; justify-content: space-between; font-weight: 700;">
+                <span data-hf-id="hf-tz6y">Urgency Index (15% Weight)</span>
+                <span data-hf-id="hf-735d" style="color: #22D3EE;">90 / 100</span>
+              </div>
+              <div data-hf-id="hf-6eyd" class="breakdown-bar-bg"><div data-hf-id="hf-cedd" class="breakdown-bar-fill" id="bar-4"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENE 4: POLICY BRIEF & SIMULATION (12.0s - 16.0s) -->
+    <div data-hf-id="hf-d9q4" class="scene scene-4" id="scene-4">
+      <div data-hf-id="hf-vmap" class="brief-grid">
+        <div data-hf-id="hf-lyve" class="glass-card">
+          <div data-hf-id="hf-abp2" class="glass-badge" style="margin-bottom: 20px;">Executive Brief Generator</div>
+          <h2 data-hf-id="hf-qe5c" style="font-size: 28px; font-weight: 800; margin-bottom: 16px;">Cabinet Policy Recommendation</h2>
+          <div data-hf-id="hf-y08a" style="background: rgba(7, 17, 31, 0.6); padding: 20px; border-radius: 16px; border-left: 4px solid #22D3EE; margin-bottom: 20px;">
+            <div data-hf-id="hf-oipo" style="font-weight: 700; color: #38BDF8; font-size: 18px; margin-bottom: 6px;">Regional Water Resilience &amp; Solar Desalination</div>
+            <p data-hf-id="hf-8w2w" style="color: #CBD5E1; font-size: 16px; line-height: 1.5;">Deploys regional solar-powered water purification nodes across 4 mandal clusters to eliminate supply deficit.</p>
+          </div>
+          <div data-hf-id="hf-n13e" style="display: flex; justify-content: space-between; color: #94A3B8; font-weight: 600;">
+            <span data-hf-id="hf-8ixb">Target Timeline: <strong data-hf-id="hf-lzmm">90 Days</strong></span>
+            <span data-hf-id="hf-dkj2">Est. Cost: <strong data-hf-id="hf-xb7n" style="color: #F8FAFC;">$4.2M</strong></span>
+          </div>
+        </div>
+
+        <div data-hf-id="hf-wlsb" class="glass-card" style="display: flex; flex-direction: column; justify-content: center;">
+          <div data-hf-id="hf-cgw9" class="glass-badge" style="background: rgba(74, 222, 128, 0.15); color: #4ADE80; border-color: rgba(74, 222, 128, 0.3); align-self: center;">Counterfactual Simulation</div>
+          <div data-hf-id="hf-3rxl" class="impact-stat-box">
+            <div data-hf-id="hf-zh9u" style="font-size: 18px; color: #94A3B8; font-weight: 700; margin-bottom: 12px;">PREDICTED COMPLAINT REDUCTION</div>
+            <div data-hf-id="hf-1tsy" class="impact-num">-34%</div>
+            <p data-hf-id="hf-iren" style="color: #CBD5E1; font-size: 16px; margin-top: 12px;">Simulated public satisfaction improvement across 8,400 citizens.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENE 5: OUTRO (16.0s - 20.0s) -->
+    <div data-hf-id="hf-77s2" class="scene scene-5" id="scene-5">
+      <div data-hf-id="hf-9w6e" class="hero-outro">
+        <div data-hf-id="hf-4sox" class="brand-icon" style="width: 80px; height: 80px; font-size: 40px; margin: 0 auto 20px; border-radius: 20px;">CP</div>
+        <h1 data-hf-id="hf-2d6e" class="outro-title text-cyan-grad">CitizenPulse BRICS</h1>
+        <p data-hf-id="hf-8nuy" class="outro-tagline">From Citizen Voice to Infrastructure Intelligence</p>
+
+        <div data-hf-id="hf-lrn5" class="hackathon-badge">
+          <div data-hf-id="hf-ykqb" class="brics-flag-dots">
+            <div data-hf-id="hf-dg2t" class="dot dot-b"></div>
+            <div data-hf-id="hf-sd9x" class="dot dot-r"></div>
+            <div data-hf-id="hf-pyla" class="dot dot-i"></div>
+            <div data-hf-id="hf-cof0" class="dot dot-c"></div>
+            <div data-hf-id="hf-rlm4" class="dot dot-s"></div>
+          </div>
+          <span data-hf-id="hf-58m1" style="font-size: 20px; font-weight: 700; color: #F8FAFC;">BRICS Hackathon Submission Prototype</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- GSAP Timeline & Hyperframes Registry -->
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    // Hyperframes Timeline Registry
+    window.__timelines = window.__timelines || {};
+    window.__timelines['main'] = tl;
+
+    // Scene 1: Hook (0.0s - 3.5s)
+    tl.to('#scene-1', { opacity: 1, scale: 1, duration: 0.4 }, 0.0);
+    tl.to('#scene-1', { opacity: 0, scale: 0.96, duration: 0.4 }, 3.1);
+
+    // Scene 2: Multilingual Ingestion (3.5s - 7.5s)
+    tl.to('#scene-2', { opacity: 1, scale: 1, duration: 0.4 }, 3.5);
+    tl.to('#scene-2', { opacity: 0, scale: 0.96, duration: 0.4 }, 7.1);
+
+    // Scene 3: Explainable Score (7.5s - 12.0s)
+    tl.to('#scene-3', { opacity: 1, scale: 1, duration: 0.4 }, 7.5);
+
+    const scoreObj = { val: 0 };
+    tl.to(scoreObj, {
+      val: 91,
+      duration: 2.0,
+      ease: 'power2.out',
+      onUpdate: function() {
+        document.getElementById('score-counter').innerText = Math.round(scoreObj.val);
+      }
+    }, 7.8);
+
+    tl.to('#bar-1', { width: '95%', duration: 1.2, ease: 'power2.out' }, 8.0);
+    tl.to('#bar-2', { width: '88%', duration: 1.2, ease: 'power2.out' }, 8.3);
+    tl.to('#bar-3', { width: '92%', duration: 1.2, ease: 'power2.out' }, 8.6);
+    tl.to('#bar-4', { width: '90%', duration: 1.2, ease: 'power2.out' }, 8.9);
+
+    tl.to('#scene-3', { opacity: 0, scale: 0.96, duration: 0.4 }, 11.6);
+
+    // Scene 4: Policy Brief (12.0s - 16.0s)
+    tl.to('#scene-4', { opacity: 1, scale: 1, duration: 0.4 }, 12.0);
+    tl.to('#scene-4', { opacity: 0, scale: 0.96, duration: 0.4 }, 15.6);
+
+    // Scene 5: Outro (16.0s - 20.0s)
+    tl.to('#scene-5', { opacity: 1, scale: 1, duration: 0.4 }, 16.0);
+  </script>
+</body>
+</html>
