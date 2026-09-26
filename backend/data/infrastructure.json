@@ -1,0 +1,98 @@
+[
+  {
+    "id": "infra-01",
+    "category": "Water & Sanitation",
+    "icon": "Droplets",
+    "coveragePercent": 68,
+    "gapPercent": 32,
+    "citizenDemandLevel": "Critical",
+    "investmentAllocated": "₹420 Cr",
+    "trend": "Increasing Demand",
+    "activeHotspots": 12,
+    "priorityScoreAvg": 89
+  },
+  {
+    "id": "infra-02",
+    "category": "Roads & Transport",
+    "icon": "Truck",
+    "coveragePercent": 74,
+    "gapPercent": 26,
+    "citizenDemandLevel": "High",
+    "investmentAllocated": "₹850 Cr",
+    "trend": "Stable Deficit",
+    "activeHotspots": 9,
+    "priorityScoreAvg": 84
+  },
+  {
+    "id": "infra-03",
+    "category": "Healthcare",
+    "icon": "HeartPulse",
+    "coveragePercent": 71,
+    "gapPercent": 29,
+    "citizenDemandLevel": "High",
+    "investmentAllocated": "₹610 Cr",
+    "trend": "Increasing Demand",
+    "activeHotspots": 7,
+    "priorityScoreAvg": 86
+  },
+  {
+    "id": "infra-04",
+    "category": "Education",
+    "icon": "GraduationCap",
+    "coveragePercent": 82,
+    "gapPercent": 18,
+    "citizenDemandLevel": "Moderate",
+    "investmentAllocated": "₹390 Cr",
+    "trend": "Improving",
+    "activeHotspots": 4,
+    "priorityScoreAvg": 74
+  },
+  {
+    "id": "infra-05",
+    "category": "Electricity",
+    "icon": "Zap",
+    "coveragePercent": 85,
+    "gapPercent": 15,
+    "citizenDemandLevel": "Moderate",
+    "investmentAllocated": "₹510 Cr",
+    "trend": "Stable",
+    "activeHotspots": 3,
+    "priorityScoreAvg": 72
+  },
+  {
+    "id": "infra-06",
+    "category": "Digital Connectivity",
+    "icon": "Wifi",
+    "coveragePercent": 79,
+    "gapPercent": 21,
+    "citizenDemandLevel": "High",
+    "investmentAllocated": "₹280 Cr",
+    "trend": "Rapid Growth",
+    "activeHotspots": 5,
+    "priorityScoreAvg": 78
+  },
+  {
+    "id": "infra-07",
+    "category": "Housing",
+    "icon": "Home",
+    "coveragePercent": 65,
+    "gapPercent": 35,
+    "citizenDemandLevel": "High",
+    "investmentAllocated": "₹490 Cr",
+    "trend": "Increasing Deficit",
+    "activeHotspots": 6,
+    "priorityScoreAvg": 81
+  },
+  {
+    "id": "infra-08",
+    "category": "Public Safety",
+    "icon": "ShieldAlert",
+    "coveragePercent": 77,
+    "gapPercent": 23,
+    "citizenDemandLevel": "Moderate",
+    "investmentAllocated": "₹310 Cr",
+    "trend": "Stable",
+    "activeHotspots": 4,
+    "priorityScoreAvg": 76
+  }
+]

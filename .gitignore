@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+**/dist/
+build/
+
+# Environment files
+.env
+.env.local
+backend/.env
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+*.log
+
+# Netlify
+.netlify

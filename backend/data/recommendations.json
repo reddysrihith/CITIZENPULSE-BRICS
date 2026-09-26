@@ -1,0 +1,118 @@
+[
+  {
+    "id": "REC-001",
+    "title": "Regional Water Resilience & Solar Desalination Program",
+    "region": "Telangana",
+    "country": "India",
+    "category": "Water & Sanitation",
+    "priorityScore": 91,
+    "affectedPopulation": 184000,
+    "problemStatement": "Persistent drinking water shortages reported across 42 villages with 32% piped supply infrastructure deficit.",
+    "proposedInterventions": [
+      "Deploy 18 modular community reverse osmosis and solar filtration plants",
+      "Rehabilitate 120km of primary distribution pipelines",
+      "Install IoT flow monitoring sensors for leak prevention",
+      "Establish rainwater harvesting check-dams along rural catchment basins"
+    ],
+    "expectedImpact": {
+      "beneficiaries": "184,000 residents",
+      "complaintReduction": "34% reduction in water distress signals within 90 days",
+      "coverageGain": "Piped clean water coverage increase from 68% to 92%"
+    },
+    "aiReasoning": "High citizen demand (27/30), severe infrastructure deficit (23/25), and high population density impact (18/20) converge in Telangana mandals.",
+    "status": "Recommended",
+    "estimatedCost": "₹145 Cr"
+  },
+  {
+    "id": "REC-002",
+    "title": "Marathwada Agricultural Rural Connectivity Corridor",
+    "region": "Maharashtra (Marathwada)",
+    "country": "India",
+    "category": "Roads & Transport",
+    "priorityScore": 88,
+    "affectedPopulation": 320000,
+    "problemStatement": "Unpaved link roads obstructing agricultural supply lines to mandi distribution hubs.",
+    "proposedInterventions": [
+      "Pave 240km of all-weather rural feeder roads",
+      "Construct 8 reinforced concrete causeway bridges across seasonal rivers",
+      "Deploy solar-powered street lighting at major village junctions"
+    ],
+    "expectedImpact": {
+      "beneficiaries": "320,000 farmers and residents",
+      "complaintReduction": "45% reduction in transport transit delay complaints",
+      "coverageGain": "Road accessibility index upgrade to 88%"
+    },
+    "aiReasoning": "Citizen distress requests peak during monsoon; high logistics impact on smallholder farming communities.",
+    "status": "Under Review",
+    "estimatedCost": "₹280 Cr"
+  },
+  {
+    "id": "REC-003",
+    "title": "Bahia Tele-Medicine & Remote Clinic Network",
+    "region": "Bahia",
+    "country": "Brazil",
+    "category": "Healthcare",
+    "priorityScore": 87,
+    "affectedPopulation": 145000,
+    "problemStatement": "Geographic isolation causing critical healthcare access delays for inland communities.",
+    "proposedInterventions": [
+      "Construct 6 regional diagnostic sub-centers",
+      "Equip 24 rural health units with satellite tele-medicine hubs",
+      "Deploy 4 mobile maternal care emergency units"
+    ],
+    "expectedImpact": {
+      "beneficiaries": "145,000 rural residents",
+      "complaintReduction": "50% reduction in emergency transfer wait times",
+      "coverageGain": "Primary healthcare access within 30 min radius"
+    },
+    "aiReasoning": "Significant gap in specialized care access highlighted by recurring high-urgency citizen calls.",
+    "status": "Recommended",
+    "estimatedCost": "$18.5M"
+  },
+  {
+    "id": "REC-004",
+    "title": "Eastern Cape Municipal Water Sanitation Upgrade",
+    "region": "Eastern Cape",
+    "country": "South Africa",
+    "category": "Water & Sanitation",
+    "priorityScore": 89,
+    "affectedPopulation": 110000,
+    "problemStatement": "Township sanitation backlogs and intermittent water tanker dependence.",
+    "proposedInterventions": [
+      "Upgrade municipal water treatment plant capacity by 40%",
+      "Replace pit latrines with eco-sanitation sewer connections in 14 townships",
+      "Establish automated community water dispensing points"
+    ],
+    "expectedImpact": {
+      "beneficiaries": "110,000 township residents",
+      "complaintReduction": "60% reduction in sanitation hazard reports",
+      "coverageGain": "Safe sanitation access increase from 59% to 89%"
+    },
+    "aiReasoning": "Highest sanitation gap metric (41%) among African urban-rural transition zones.",
+    "status": "Approved",
+    "estimatedCost": "R 310M"
+  },
+  {
+    "id": "REC-005",
+    "title": "Sverdlovsk Thermal Grid Modernization",
+    "region": "Sverdlovsk Oblast",
+    "country": "Russia",
+    "category": "Electricity",
+    "priorityScore": 79,
+    "affectedPopulation": 78000,
+    "problemStatement": "Sub-zero temperature vulnerability caused by aging central heating infrastructure.",
+    "proposedInterventions": [
+      "Automate 14 municipal district heating sub-stations",
+      "Insulate 65km of main thermal transmission pipes",
+      "Install digital pressure monitors for immediate leak isolation"
+    ],
+    "expectedImpact": {
+      "beneficiaries": "78,000 residents",
+      "complaintReduction": "75% drop in winter heating outage emergency tickets",
+      "coverageGain": "Grid thermal efficiency increased by 28%"
+    },
+    "aiReasoning": "Substantial winter risk score elevation due to extreme seasonal temperatures.",
+    "status": "Recommended",
+    "estimatedCost": "₽ 1.2B"
+  }
+]

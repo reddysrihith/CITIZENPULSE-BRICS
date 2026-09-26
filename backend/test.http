@@ -1,0 +1,55 @@
+### API Testing Example
+# You can use VS Code extension "REST Client" to test these APIs
+# Or import these concepts to Postman
+
+@baseUrl = http://localhost:5000/api
+@token = {{login.response.body.token}}
+
+### 1. Register a new user
+# @name register
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "password123",
+  "role": "client"
+}
+
+###
+
+### 2. Login
+# @name login
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@example.com",
+  "password": "password123"
+}
+
+###
+
+### 3. Get Current User Profile (Requires Token)
+GET {{baseUrl}}/auth/me
+Authorization: Bearer {{token}}
+
+###
+
+### 4. Update Profile (Requires Token)
+PUT {{baseUrl}}/users/profile
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "bio": "I am an experienced client looking for top talent.",
+  "skills": ["Project Management", "Agile"]
+}
+
+###
+
+### 5. Admin: Get all users
+# Only works if the logged-in user is an admin
+GET {{baseUrl}}/admin/users
+Authorization: Bearer {{token}}
