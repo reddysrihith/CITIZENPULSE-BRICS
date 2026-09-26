@@ -5,6 +5,11 @@
 
 ---
 
+### 🌐 **LIVE DEMO WEBSITE**:
+👉 **[https://citizenpulsebrics-five.vercel.app](https://citizenpulsebrics-five.vercel.app)**
+
+---
+
 ## 📸 Platform Screenshots
 
 ### 1. National Infrastructure Intelligence Command Center
@@ -19,6 +24,8 @@
 
 Governments across BRICS nations struggle to consolidate fragmented citizen requests arriving across voice calls, SMS, WhatsApp, local web forms, and diverse regional languages. **CitizenPulse BRICS** bridges this gap by deploying a unified AI pipeline that converts unstructured citizen feedback into evidence-based spatial infrastructure intelligence, explainable priority scores, executive policy briefs, and counterfactual impact simulations.
 
+> 🌐 **Live Production Link**: [https://citizenpulsebrics-five.vercel.app](https://citizenpulsebrics-five.vercel.app)
+> 
 > ⚠️ **Synthetic Data Notice**: All datasets in this prototype platform are synthetically generated demo datasets and do not represent classified government records.
 
 ---
@@ -52,13 +59,14 @@ Counterfactual Impact Simulation
 - **Frontend**: React 19, TypeScript/JSX, Vite, Tailwind CSS, Recharts, Leaflet / React Leaflet, Lucide Icons, Framer Motion
 - **Backend**: Node.js, Express REST API
 - **AI Integration**: Google Gemini API (`gemini-1.5-flash`) with automatic, zero-fail **DEMO MODE** fallback
+- **Deployment**: Vercel Live Production ([citizenpulsebrics-five.vercel.app](https://citizenpulsebrics-five.vercel.app))
 - **Data Engine**: Synthetic multi-country JSON DPI Registry (500+ requests, 30 regions, 8 infrastructure categories)
 
 ---
 
 ## 🏆 3-Minute Interactive Judge Demo
 
-The platform includes a dedicated **"Run Judge Demo"** wizard accessible directly from the top navigation bar. When triggered, it guides evaluators through the 10-step end-to-end workflow:
+The platform includes a dedicated **"Run Judge Demo"** wizard accessible directly from the top navigation bar on the [Live Website](https://citizenpulsebrics-five.vercel.app). When triggered, it guides evaluators through the 10-step end-to-end workflow:
 
 1. **Step 1**: Citizen submits rural Telugu drinking water voice request.
 2. **Step 2**: AI auto-detects Telugu language with 99.2% confidence.
@@ -82,8 +90,8 @@ The platform includes a dedicated **"Run Judge Demo"** wizard accessible directl
 ### Setup Steps
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-repo/citizenpulse-brics.git
-cd citizenpulse-brics
+git clone https://github.com/reddysrihith/CITIZENPULSE-BRICS.git
+cd CITIZENPULSE-BRICS
 
 # 2. Install dependencies
 npm install
@@ -99,7 +107,7 @@ cp backend/.env.example backend/.env
 npm run dev
 ```
 
-Visit `http://localhost:5173` in your browser.
+Visit `http://localhost:5173` locally or open the live deployment at [https://citizenpulsebrics-five.vercel.app](https://citizenpulsebrics-five.vercel.app).
 
 ---
 
