@@ -24,7 +24,8 @@
 
 Governments across BRICS nations struggle to consolidate fragmented citizen requests arriving across voice calls, SMS, WhatsApp, local web forms, and diverse regional languages. **CitizenPulse BRICS** bridges this gap by deploying a unified AI pipeline that converts unstructured citizen feedback into evidence-based spatial infrastructure intelligence, explainable priority scores, executive policy briefs, and counterfactual impact simulations.
 
-> 🌐 **Live Production Link**: [https://citizenpulsebrics-five.vercel.app](https://citizenpulsebrics-five.vercel.app)
+> 🌐 **Live Production Link**: [https://citizenpulsebrics-five.vercel.app](https://citizenpulsebrics-five.vercel.app)  
+> 📁 **GitHub Repository**: [https://github.com/reddysrihith/citizenpulse-brics](https://github.com/reddysrihith/citizenpulse-brics)  
 > 
 > ⚠️ **Synthetic Data Notice**: All datasets in this prototype platform are synthetically generated demo datasets and do not represent classified government records.
 
@@ -90,8 +91,8 @@ The platform includes a dedicated **"Run Judge Demo"** wizard accessible directl
 ### Setup Steps
 ```bash
 # 1. Clone the repository
-git clone https://github.com/reddysrihith/CITIZENPULSE-BRICS.git
-cd CITIZENPULSE-BRICS
+git clone https://github.com/reddysrihith/citizenpulse-brics.git
+cd citizenpulse-brics
 
 # 2. Install dependencies
 npm install
