@@ -1,12 +1,8 @@
 {
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/index.js"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
+  "services": {
+    "frontend": {
+      "root": "frontend",
+      "framework": "vite"
     }
-  ]
+  }
 }
